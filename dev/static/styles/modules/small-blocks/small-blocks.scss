@@ -38,3 +38,42 @@
 		color: $mid-gray;
 	}
 	}
+
+.s-light-bg {
+	background-color: $parcelain;
+}
+.text {
+	line-height: 1.79;
+	margin-bottom: 1rem;
+}
+.about {
+	display: flex;
+	& > * {
+		margin-right: 3rem;
+		&:last-child{margin-right: 0;}
+	}
+	&__body {
+		flex:1;
+		.tab {
+			& > * {
+				margin: 1.5rem 0;
+				&:first-child{margin-top: 0;}
+				&:last-child{margin-bottom: 0;}
+			}
+		}
+	}
+	&-navigation {
+		flex: 0 0 25.5rem;
+		width: 25.5rem;
+		&__item {
+			border-bottom: 2px solid $alto;
+			line-height: 4.8rem;
+			height: 5rem;
+			padding-left: 1rem;
+			:last-child {margin-right: 0;}
+			&.tabs-navigation__item--active {
+				border-bottom-color: $blaze-orange;
+			}
+		}
+	}
+}

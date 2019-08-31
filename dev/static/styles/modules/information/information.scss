@@ -1,0 +1,35 @@
+@import "news";
+@import "review";
+@import "brands";
+
+.information {
+	display: flex;
+	& > * {
+		flex: 1;
+		padding-right: 3rem;
+		&:last-child {
+			padding-right: 0;
+		}
+	}
+
+	&-item {
+		&__body {
+			height: 25rem;
+		}
+		&__footer {
+			display: flex;
+			& > * {
+				margin-right: 0.5rem;
+				&:last-child{margin-right: 0;}
+			}
+		}
+		&__link {
+			display: inline-block;
+			border-bottom: 1px solid rgba(38,38,38,0.15);
+			color: $main-shaft;
+		}
+		&__count {
+			color: $chelsea-cucumber;
+		}
+	}
+}
