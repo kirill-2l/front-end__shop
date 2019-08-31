@@ -1,0 +1,22 @@
+.header__main
+	.container
+		.header__content
+			.header__logo.logo
+				img(src="static/images/general/logo.svg", alt="logo").logo__img
+			.header__phones
+				.header__item
+					a(href="tel:8(495)1203044").header__phone 8 (495) 120-30-44
+					a(href="").header__link Заказать звонок
+				.header__item
+					a(href="tel:880070737518").header__phone 8 (800) 707-375-18
+					span.header__description Заказать бесплатный
+			.header__address.header-address
+				+icon('location', 'header-address__icon')
+				span.header-address__text Москва, 2-й Котляковский переулок, 1с6БН
+			.header__shop
+				.header-goods
+					span.header-goods__price 0 &#8381;
+					span.header-goods__count 0 товаров
+				.header-basket
+					+icon('basket', 'header-basket__icon')
+					span.header-basket__text Корзина
