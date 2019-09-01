@@ -1,5 +1,10 @@
+@import "mobile";
+
 .header {
 	border-bottom: 1px solid $athens-gray;
+	@media screen and (max-width: $tablet-size) {
+		border-bottom: none;
+	}
 	&__nav {
 		&.header__nav {
 			&--right {
@@ -10,6 +15,9 @@
 	&__top {
 		background-color: $athens-gray;
 		padding: 1rem 0;
+		@media screen and (max-width: $tablet-size) {
+			display: none;
+		}
 	}
 	&__main {
 		padding: 2.5rem 0;
@@ -20,6 +28,18 @@
 	}
 	&__logo {
 		margin-right: 4rem;
+	}
+	&__item {
+		@media screen and (max-width: $tablet-size) {
+			display: none;
+		}
+		&.header__item {
+			&--mobile {
+				@media screen and (max-width: $tablet-size) {
+					display: block;
+				}
+			}
+		}
 	}
 	&__link {
 		display: block;
@@ -35,6 +55,11 @@
 	}
 	&__search {
 		margin-left: auto;
+	}
+	&__menu {
+		@media screen and (max-width: $tablet-size) {
+			display: none;
+		}
 	}
 	&__phones {
 		display: flex;
@@ -65,6 +90,10 @@
 	&-address {
 		display: flex;
 		flex: 0 0 19rem;
+		width: 19rem;
+		@media screen and (max-width: $tablet-size) {
+			display: none;
+		}
 		&__icon {
 			flex: 0 0 1.5rem;
 			height: 2.1rem;

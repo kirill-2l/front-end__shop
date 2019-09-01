@@ -40,7 +40,7 @@ $(document).ready(function () {
 				nextArrow: ".banner__navigation--next",
 				dots: true,
 				customPaging: function(slider, i) {
-					return '<a class="banner__dot"></a>';
+					return '<div class="banner__dot"></div>';
 				},
 				appendDots: '.banner__dots',
 
@@ -55,7 +55,8 @@ $(document).ready(function () {
 						tab = $(tabsBody).find('.' + tabName);
 				$(this).addClass('tabs-navigation__item--active').siblings().removeClass('tabs-navigation__item--active');
 				$(tab).addClass('tab--active').siblings().removeClass('tab--active');
-				if ($(tabsBody).find('.js-products-line-slider').length) {
+				if ($(tabsBody).find('.js-products-line-slider').length)
+				{
 					$('.js-products-line-slider').each(function () {
 						$(this).slick('refresh');
 					});
@@ -65,33 +66,56 @@ $(document).ready(function () {
 				}
 			});
 
-		}
+		};
 
 		let productPrevSlider = function () {
 			$('.js-product-prev__slider').each(function (idx) {
-				let carouselId = "carousel" + idx;
-				this.closest('.product-prev').id = carouselId;
+				let productPrevSliderClass = "product-prev-slider-" + idx;
+				this.closest('.product-prev').classList.add(productPrevSliderClass);
 				$(this).slick({
 					slidesToShow: 1,
 					slidesToScroll: 1,
 					arrows: false,
 					dots: true,
-					appendDots: '#' + carouselId + ' .product-prev__colors',
+					appendDots: '.' + productPrevSliderClass + ' .product-prev__colors',
+					swipe: false,
+					infinite: false,
 					customPaging: function(slider, i) {
 						let color = $(slider.$slides[i]).data('color');
-						return '<a class="product-prev__color" style="background-color:' + color + '"></a>'
+						return '<div class="product-prev__color" style="background-color:' + color + '"></div>'
 					}
 				});
 			});
 		};
 
 		let productLineSlider = function () {
-			$('.js-products-line-slider').slick({
-				slidesToShow: 4,
-				slidesToScroll: 1,
+			$('.js-products-line-slider').each(function (idx) {
+				let productsLineSliderID = "products-line-slider-" + idx;
+				this.closest('.products-line-slider').id = productsLineSliderID;
+				$(this).slick({
+					slidesToShow: 4,
+					slidesToScroll: 1,
+					infinite: false,
+					dots: true,
+					appendDots: '#' + productsLineSliderID + ' .products-line-slider__dots',
+					prevArrow: '#' + productsLineSliderID + ' .products-line-slider__btn--prev',
+					nextArrow: '#' + productsLineSliderID + ' .products-line-slider__btn--next',
+					responsive: [
+						{
+							breakpoint: 1139,
+							settings: {
+								slidesToShow: 3,
+								arrows: true,
+								customPaging: function(slider, i) {
+									return '<div class="products-line-slider__dot"></div';
+								},
+							}
+						}
+					]
+			});
+		});
+	};
 
-			})
-		}
 
 
 

@@ -3,19 +3,26 @@
 		height: 2.2rem;
 	}
 }
-
 .advantages {
 	display: flex;
 	align-items: center;
 	border-radius: 0.4rem;
 	background-color: $parcelain;
 	padding: 2rem;
+	@media screen and (max-width: $tablet-size) {
+		justify-content: space-between;
+		padding: 2rem 4rem;
+	}
 }
-
 .advantage {
 	display: flex;
 	align-items: center;
 	margin-right: 18rem;
+	@media screen and (max-width: $tablet-size) {
+		flex-direction: column;
+		text-align: center;
+		margin-right: 0;
+	}
 	:last-child {
 		margin-right: 0;
 	}
@@ -32,13 +39,16 @@
 		@include size(5rem);
 		fill: $dusty-gray;
 		margin-right: 2rem;
+		@media screen and (max-width: $tablet-size) {
+			margin-bottom: 1rem;
+			margin-right: 0;
+		}
 	}
 	&__descr {
 		font-size: 1.2rem;
 		color: $mid-gray;
 	}
 	}
-
 .s-light-bg {
 	background-color: $parcelain;
 }
@@ -75,5 +85,37 @@
 				border-bottom-color: $blaze-orange;
 			}
 		}
+	}
+}
+
+.sandwich {
+	cursor: pointer;
+	height: 1.6rem;
+	position: relative;
+	width: 2rem;
+	&--active {
+		.sandwich__line {
+			&--top {
+				top: 8px;
+				transform: rotate(45deg);
+			}
+			&--middle { opacity: 0; }
+			&--bottom {
+				top: 8px;
+				transform: rotate(-45deg);
+			}
+		}
+	}
+	&__line {
+		background-color: $white;
+		display: block;
+		height: 2px;
+		left: 0;
+		position: absolute;
+		transition: all linear .4s;
+		width: 100%;
+		&--top { top: 0; }
+		&--middle { top: 7px; }
+		&--bottom { top: 14px; }
 	}
 }

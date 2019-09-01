@@ -1,8 +1,10 @@
 .product-prev
 	.product-prev__header
 		.js-product-prev__slider
-			img(src="static/images/content/products/2.jpg", alt="product image" data-color="#ffffff").product-prev__img
-			img(src="static/images/content/products/4.jpg", alt="product image" data-color="#000000").product-prev__img
+			.product-prev__img-wrapper(data-color="#ffffff")
+				img(src="static/images/content/products/2.jpg", alt="product image" ).product-prev__img
+			.product-prev__img-wrapper(data-color="#000000")
+				img(src="static/images/content/products/4.jpg", alt="product image").product-prev__img
 
 	.product-prev__body
 		.product-prev__info

@@ -1,1 +1,113 @@
-footer { flex: 0 0 auto; }
+.footer {
+	flex: 0 0 auto;
+	background-color: $athens-gray;
+	&__main {
+		padding: 4rem 0;
+		.container {
+			display: flex;
+			align-items: flex-start;
+		}
+	}
+	&__item {
+		display: flex;
+		flex-direction: column;
+		margin-right: 13rem;
+		max-width: 21.5rem;
+		&:last-child{margin-right: 0;}
+		& > * {
+			margin: 1.5rem 0;
+			&:first-child{margin-top: 0;}
+			&:last-child{margin-bottom: 0;}
+		}
+	}
+	&__socials {
+		padding-bottom: 3rem;
+	}
+	&__bottom {
+		padding: 2rem 0;
+		background-color: rgba(0,0,0, 0.05);
+		.container {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+	}
+	&__personal-data {
+		color: $oslo-gray;
+	}
+	&__socials {
+		.contaner {
+			display: flex;
+			align-items: center;
+
+		}
+	}
+	&-nav {
+		&__item {
+			margin-bottom: 1.5rem;
+		}
+		&__link {
+			color: $main-shaft;
+			&:hover {text-decoration: underline;}
+		}
+	}
+	&__contacts {
+		margin-left: auto;
+		text-align: center;
+	}
+	&__navigation {
+		display: flex;
+		align-items: flex-start;
+	}
+	&__phones {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 2rem;
+		& > * {
+			margin: 0.4rem 0;
+		}
+	}
+	&__phone {
+		color: $main-shaft;
+		font-size: 2rem;
+		font-weight: 600;
+		&--small {
+			font-size: 1.4rem;
+			color: $main-shaft;
+		}
+	}
+	&__mail {
+		color: $main-shaft;
+	}
+	&__address {
+		line-height: 1.79;
+	}
+}
+
+.socials {
+	display: flex;
+	align-items: center;
+	&__item{
+		margin-right: 5rem;
+		&:last-child{margin-right: 0;}
+	}
+	&__link {
+		display: flex;
+		align-items: center;
+		color: $oslo-gray;
+		& > * {
+			margin-right: 2rem;
+			&:last-child{margin-right: 0;}
+		}
+	}
+}
+
+.yandex-market {
+	display: flex;
+	align-items: center;
+	margin-left: auto;
+	& > * {
+		margin-right: 2rem;
+		&:last-child{margin-right: 0;}
+	}
+}
