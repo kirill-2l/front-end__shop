@@ -6,13 +6,21 @@
 		.container {
 			display: flex;
 			align-items: flex-start;
+			@media screen and (max-width: $tablet-size) {
+				flex-wrap: wrap;
+			}
 		}
 	}
 	&__item {
 		display: flex;
 		flex-direction: column;
 		margin-right: 13rem;
-		max-width: 21.5rem;
+		max-width: 22.6rem;
+		@media screen and (max-width: $tablet-size) {
+			flex: 0 0 22.6rem;
+			width: 22.6rem;
+			margin-right: 0;
+		}
 		&:last-child{margin-right: 0;}
 		& > * {
 			margin: 1.5rem 0;
@@ -28,14 +36,29 @@
 		background-color: rgba(0,0,0, 0.05);
 		.container {
 			display: flex;
-			align-items: center;
+			align-items: flex-start;
+
 			justify-content: space-between;
+			@media screen and (max-width: $tablet-size) {
+				font-size: 1.2rem;
+				line-height: 1.67;
+				& > * {
+					flex: 0 0 45%;
+					width: 45%;
+				}
+			}
 		}
 	}
 	&__personal-data {
 		color: $oslo-gray;
 	}
 	&__socials {
+		padding-bottom: 3rem;
+		.yandex-market {
+			@media screen and (max-width: $tablet-size) {
+				display: none;
+			}
+		}
 		.contaner {
 			display: flex;
 			align-items: center;
@@ -54,10 +77,27 @@
 	&__contacts {
 		margin-left: auto;
 		text-align: center;
+		@media screen and (max-width: $tablet-size) {
+			display: none;
+		}
+		&-mobile {
+			display: none;
+			width: 100%;
+			justify-content: space-between;
+			@media screen and (max-width: $tablet-size) {
+				display: flex;
+			}
+		}
 	}
 	&__navigation {
 		display: flex;
 		align-items: flex-start;
+		@media screen and (max-width: $tablet-size) {
+			justify-content: space-between;
+			flex: 1;
+			width: 100%;
+			margin-bottom: 3rem;
+		}
 	}
 	&__phones {
 		display: flex;
@@ -106,8 +146,17 @@
 	display: flex;
 	align-items: center;
 	margin-left: auto;
+	@media screen and (max-width: $tablet-size) {
+		margin-left: 0;
+		flex-direction: column;
+		align-items: flex-start;
+	}
 	& > * {
 		margin-right: 2rem;
+		@media screen and (max-width: $tablet-size) {
+			margin-right: 0;
+			margin-bottom: 1rem;
+		}
 		&:last-child{margin-right: 0;}
 	}
 }

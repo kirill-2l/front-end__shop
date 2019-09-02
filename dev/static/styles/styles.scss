@@ -56,7 +56,8 @@ button { outline: none; }
 .container {
   margin: 0 auto;
   max-width: $content-size;
-  width: 100%;
+	width: 100%;
+	padding: 0 1.5rem;
 }
 
 

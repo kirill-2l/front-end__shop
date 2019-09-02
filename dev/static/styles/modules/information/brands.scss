@@ -1,7 +1,9 @@
 
 .brands__list {
 	display: flex;
-	flex-wrap: wrap;
+	@media screen and (max-width: $tablet-size) {
+		flex-wrap: wrap;
+	}
 	& > * {
 		margin-right: 1rem;
 		margin-bottom: 1rem;
@@ -13,8 +15,12 @@
 		& > * {
 			margin-right: 1rem;
 			margin-bottom: 1rem;
-			&:nth-child(3n+3) {
+			&:nth-child(3n + 3) {
 				margin-right: 0;
+				@media screen and (max-width: $tablet-size) {
+					margin-right: 1rem;
+					&:last-child{margin-right: 0;}
+				}
 			}
 		}
 	}

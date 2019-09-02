@@ -22,18 +22,33 @@ footer.footer
 						+footerNavLink('', 'Доставка')
 						+footerNavLink('', 'Оплата')
 						+footerNavLink('', 'Поставщикам')
+						+footerNavLink('', 'Новости')
+						+footerNavLink('', 'Отзывы')
 				.footer__item
 					ul.footer-nav
 						+footerNavLink('', 'Контакты')
 						+footerNavLink('', 'Вопрос-ответ')
 						+footerNavLink('', 'Карта сайта')
-					span.footer-nav__address Москваб проспект Андронов, д. 11, к.2, павильон № 1/2
+					span.footer__address Москваб проспект Андронов, д. 11, к.2, павильон № 1/2
 			.footer__contacts
 				.footer__phones
 					a(href="tel:+78007077518").footer__phone 8 (800) 707-75-18
 					span.footer__text Звонок бесплатный
 					a(href="tel:+74951203034").footer__phone--small +7 (495) 120-30-34
 				a(href="mailto:sale@baby-toys.ru").footer__mail sale@baby-toys.ru
+
+			.footer__contacts-mobile
+				.footer__item
+					a(href="tel:+78007077518").footer__phone 8 (800) 707-75-18
+					span.footer__text Звонок бесплатный
+				.footer__item
+					a(href="tel:+74951203034").footer__phone--small +7 (495) 120-30-34
+					a(href="mailto:sale@baby-toys.ru").footer__mail sale@baby-toys.ru
+				.footer__item
+					.yandex-market
+						img(src="static/images/general/yandex.svg", alt="yandex-market")
+						a(href="").btn.btn--small.btn--transparent-gray.btn--inline Оставить отзыв
+
 	.footer__socials
 		.container
 			ul.socials
