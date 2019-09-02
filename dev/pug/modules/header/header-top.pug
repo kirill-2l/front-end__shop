@@ -1,16 +1,20 @@
+mixin informNavLink(link, text)
+	li.inform-nav__item
+		a(href=link).inform-nav__link=text
+
 .header__top
 		.container
 			.header__content
-				nav.header__nav.header-nav
-					ul.header-nav__list
-						+headerNavLink('1', 'О компании')
-						+headerNavLink('1', 'Доставка и оплата')
-						+headerNavLink('1', 'Акции')
-						+headerNavLink('1', 'Оптовикам')
-						+headerNavLink('1', 'Новости')
-						+headerNavLink('1', 'Гарантии')
-						+headerNavLink('1', 'Контакты')
-				nav.header__nav.header-nav.header__nav--right
-					ul.header-nav__list
-						+headerNavLink('1', 'Регистрация')
-						+headerNavLink('1', 'Вход')
+				nav.header__nav.inform-nav
+					ul.inform-nav__list
+						+informNavLink('1', 'О компании')
+						+informNavLink('1', 'Доставка и оплата')
+						+informNavLink('1', 'Акции')
+						+informNavLink('1', 'Оптовикам')
+						+informNavLink('1', 'Новости')
+						+informNavLink('1', 'Гарантии')
+						+informNavLink('1', 'Контакты')
+				nav.header__nav.header__nav--right.inform-nav
+					ul.inform-nav__list
+						+informNavLink('1', 'Регистрация')
+						+informNavLink('1', 'Вход')

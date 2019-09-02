@@ -13,7 +13,7 @@
 		&:hover {
 			.main-nav {
 				&__link {
-					border-bottom: 2px solid $blaze-orange;
+					border-bottom-color: $blaze-orange;
 				}
 				&__dropdown-wrapper {display: block;}
 			}
@@ -49,46 +49,5 @@
 		@include size(1.2rem);
 		fill: $tundora;
 		margin-left: 1rem;
-	}
-}
-.main-subnav {
-
-	&__list {
-		position: relative;
-		.main-subnav__list {
-			display: none;
-			position: absolute;
-			top: 0;
-			left: 36rem;
-		}
-	}
-	&__item {
-		width: 36rem;
-		&:hover {
-			& > .main-subnav__link {
-				background-color: $athens-gray;
-				color: $blaze-orange;
-			}
-			.main-subnav__icon {
-				fill: $blaze-orange;
-				}
-			.main-subnav__list {
-				display: block;
-			}
-		}
-	}
-
-	&__link {
-		display: flex;
-		align-items: center;
-		padding: 1rem;
-		line-height: 2rem;
-		color: $main-shaft;
-	}
-	&__icon {
-		margin-left: auto;
-		fill: $silver;
-		width: 0.8rem;
-		height: 1.2rem;
 	}
 }
