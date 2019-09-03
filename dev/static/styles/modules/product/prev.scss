@@ -2,7 +2,6 @@
 	position: relative;
 	padding: 2rem;
 	padding-top: 19rem;
-	margin: 1rem 1.5rem 3rem;
 	outline: none;
 	transition: all linear .3s;
 	border: 1px solid $alto;
@@ -41,7 +40,7 @@
 	}
 	&__title {
 		line-height: 1.43;
-		font-weight: 600;
+		font-weight: 700;
 	}
 	&__price {
 		display: flex;
@@ -54,7 +53,7 @@
 		&-current {
 			font-size: 2rem;
 			color: $blaze-orange;
-			font-weight: 600;
+			font-weight: 700;
 		}
 		&-old {
 			font-size: 1.3rem;
