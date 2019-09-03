@@ -16,7 +16,28 @@
 		cursor: pointer;
 		& > * {
 			margin-right: 2rem;
+			@media screen and (max-width: $phone-size) {
+				margin-right: 0;
+			}
 			&:last-child{margin-right: 0;}
+		}
+		@media screen and (max-width: $phone-size) {
+			background-color: $white;
+			margin-right: 1.5rem;
+			@include size(5rem);
+			border-right: 1px solid rgba(75,75,75, 0.2);
+			.sandwich {
+				&__line {
+					background-color: $tundora;
+				}
+			}
+			.mobile-menu {
+				&__title {
+					@media screen and (max-width: $phone-size) {
+						display: none;
+					}
+				}
+			}
 		}
 	}
 	&__title {
@@ -53,7 +74,7 @@
 			fill: $white;
 		}
 	}
-	&__foter {
+	&__footer {
 		display: flex;
 		align-items: center;
 		background-color: $alto;
@@ -62,5 +83,4 @@
 			&:last-child{margin-right: 0;}
 		}
 	}
-
 }

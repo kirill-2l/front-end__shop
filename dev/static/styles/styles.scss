@@ -7,6 +7,12 @@ html {
 	font-size: 62.5%;
 	height: 100%;
 	font-family: $main-font;
+	&.fixed {
+		overflow: hidden;
+		body {
+			overflow: hidden;
+		}
+	}
 }
 
 body {

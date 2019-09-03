@@ -12,6 +12,8 @@
 	&-navigation {
 		&__item {
 			cursor: pointer;
+			transition: all linear .3s;
+			white-space: nowrap;
 		}
 	}
 }

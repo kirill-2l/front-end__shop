@@ -34,12 +34,13 @@ section.sinformation.s-light-bg
 					h2.title-section Бренды
 				.information-item__body
 					.brands__wrapper
-						ul.brands__list.brands__list--small
-							each brand in [{img: 'puky', name: 'PUKY'},{img: 'globber', name: 'Globber'},{img: 'hudora', name: 'Hudora'},{img: 'kokua', name: 'Kokua'},{img: 'micro', name: 'Micro'},{img: 'Stiga', name: 'Stiga'}]
-								li.brands__item
-									a(href="").brand
-										img(src=`static/images/content/brands/${brand.img}.jpg`).brand__img
-										span.brand__name= brand.name
+						.mobile-scroll-wrapper
+							ul.brands__list.brands__list--small
+								each brand in [{img: 'puky', name: 'PUKY'},{img: 'globber', name: 'Globber'},{img: 'hudora', name: 'Hudora'},{img: 'kokua', name: 'Kokua'},{img: 'micro', name: 'Micro'},{img: 'Stiga', name: 'Stiga'}]
+									li.brands__item
+										a(href="").brand
+											img(src=`static/images/content/brands/${brand.img}.jpg`).brand__img
+											span.brand__name= brand.name
 				.information-item__footer
 					a(href="").information-item__link Все бренды
 					span.information-item__count (9)

@@ -1,6 +1,14 @@
 .logo {
 	&__img {
 		height: 2.2rem;
+		@media screen and (max-width: $phone-size) {
+			height: 1.6rem;
+		}
+	}
+}
+.mobile {
+	&__logo {
+		display: none;
 	}
 }
 .advantages {
@@ -13,6 +21,12 @@
 		justify-content: space-between;
 		padding: 2rem 4rem;
 	}
+	@media screen and (max-width: $phone-size) {
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+		padding: 2rem;
+	}
 }
 .advantage {
 	display: flex;
@@ -22,6 +36,12 @@
 		flex-direction: column;
 		text-align: center;
 		margin-right: 0;
+	}
+	@media screen and (max-width: $phone-size) {
+		text-align-last: left;
+		flex-direction: row;
+		margin-bottom: 1rem;
+		&:last-child{margin-bottom: 0;}
 	}
 	:last-child {
 		margin-right: 0;
@@ -42,6 +62,10 @@
 		@media screen and (max-width: $tablet-size) {
 			margin-bottom: 1rem;
 			margin-right: 0;
+		}
+		@media screen and (max-width: $phone-size) {
+			margin-right: 2rem;
+			margin-bottom: 0;
 		}
 	}
 	&__descr {
@@ -88,6 +112,9 @@
 			order: 1;
 			margin-bottom: 3rem;
 		}
+		@media screen and (max-width: $phone-size) {
+			overflow: auto;
+		}
 		&__item {
 			border-bottom: 2px solid $alto;
 			line-height: 4.8rem;
@@ -116,19 +143,6 @@
 	height: 1.6rem;
 	position: relative;
 	width: 2rem;
-	&--active {
-		.sandwich__line {
-			&--top {
-				top: 8px;
-				transform: rotate(45deg);
-			}
-			&--middle { opacity: 0; }
-			&--bottom {
-				top: 8px;
-				transform: rotate(-45deg);
-			}
-		}
-	}
 	&__line {
 		background-color: $white;
 		display: block;
@@ -140,5 +154,16 @@
 		&--top { top: 0; }
 		&--middle { top: 7px; }
 		&--bottom { top: 14px; }
+	}
+}
+
+.mobile-scroll {
+	&-wrapper {
+		margin: 0 -1.5rem !important;
+		overflow: auto;
+	}
+	&-inner {
+		display: inline-block;
+		padding: 0 1.5rem;
 	}
 }

@@ -3,6 +3,9 @@
 	background-color: $athens-gray;
 	&__main {
 		padding: 4rem 0;
+		@media screen and (max-width: $phone-size) {
+			padding: 2rem 0;
+		}
 		.container {
 			display: flex;
 			align-items: flex-start;
@@ -21,15 +24,54 @@
 			width: 22.6rem;
 			margin-right: 0;
 		}
+		@media screen and (max-width: $phone-size) {
+			flex: 0 0 45%;
+			width: 45%;
+			margin-bottom: 2rem;
+			max-width: 100%;
+			font-size: 1.2rem;
+			&:last-child {margin-bottom: 0;}
+		}
 		&:last-child{margin-right: 0;}
+		&.footer__item {
+			&--wide {
+				@media screen and (max-width: $phone-size) {
+					flex: 1;
+					flex-direction: row;
+					width: 100%;
+				}
+				& > * {
+					@media screen and (max-width: $phone-size) {
+						flex: 0 0 45%;
+						width: 45%;
+						margin: 0;
+					}
+				}
+			}
+			&--full {
+				@media screen and (max-width: $phone-size) {
+					flex: 1;
+					flex-direction: row;
+					width: 100%;
+				}
+			}
+			&--text-right {
+				text-align: right;
+			}
+		}
 		& > * {
 			margin: 1.5rem 0;
+			@media screen and (max-width: $phone-size) {margin: 0.5rem;}
 			&:first-child{margin-top: 0;}
 			&:last-child{margin-bottom: 0;}
 		}
 	}
 	&__socials {
 		padding-bottom: 3rem;
+		.container {
+			display: flex;
+			align-items: center;
+		}
 	}
 	&__bottom {
 		padding: 2rem 0;
@@ -37,20 +79,31 @@
 		.container {
 			display: flex;
 			align-items: flex-start;
-
 			justify-content: space-between;
 			@media screen and (max-width: $tablet-size) {
 				font-size: 1.2rem;
 				line-height: 1.67;
-				& > * {
-					flex: 0 0 45%;
-					width: 45%;
+			}
+			@media screen and (max-width: $phone-size) {
+				flex-direction: column;
+				align-items: center;
+				text-align: center;
+			}
+			& > * {
+				flex: 0 0 45%;
+				width: 45%;
+				@media screen and (max-width: $phone-size) {
+					flex: 1;
+					width: 100%;
 				}
 			}
 		}
 	}
 	&__personal-data {
 		color: $oslo-gray;
+		@media screen and (max-width: $phone-size) {
+			margin-top: 1px;
+		}
 	}
 	&__socials {
 		padding-bottom: 3rem;
@@ -67,7 +120,8 @@
 	}
 	&-nav {
 		&__item {
-			margin-bottom: 1.5rem;
+			margin-bottom: 1rem;
+			&:last-child{margin-bottom: 0;}
 		}
 		&__link {
 			color: $main-shaft;
@@ -76,7 +130,7 @@
 	}
 	&__contacts {
 		margin-left: auto;
-		text-align: center;
+		text-align: right;
 		@media screen and (max-width: $tablet-size) {
 			display: none;
 		}
@@ -87,6 +141,9 @@
 			@media screen and (max-width: $tablet-size) {
 				display: flex;
 			}
+			@media screen and (max-width: $phone-size) {
+				flex-wrap: wrap;
+		}
 		}
 	}
 	&__navigation {
@@ -98,7 +155,10 @@
 			width: 100%;
 			margin-bottom: 3rem;
 		}
+		@media screen and (max-width: $phone-size) {
+			flex-wrap: wrap;
 	}
+}
 	&__phones {
 		display: flex;
 		flex-direction: column;
@@ -111,6 +171,9 @@
 		color: $main-shaft;
 		font-size: 2rem;
 		font-weight: 600;
+			@media screen and (max-width: $phone-size) {
+				font-size: 1.4rem;
+			}
 		&--small {
 			font-size: 1.4rem;
 			color: $main-shaft;
@@ -127,9 +190,19 @@
 .socials {
 	display: flex;
 	align-items: center;
-	&__item{
+	@media screen and (max-width: $phone-size) {
+		justify-content: center;
+		width: 100%;
+	}
+	&__item {
 		margin-right: 5rem;
 		&:last-child{margin-right: 0;}
+		@media screen and (max-width: $phone-size) {
+			margin-right: 5rem;
+			&:last-child {
+				margin-right: 0;
+			}
+		}
 	}
 	&__link {
 		display: flex;
@@ -137,7 +210,15 @@
 		color: $oslo-gray;
 		& > * {
 			margin-right: 2rem;
+			@media screen and (max-width: $phone-size) {
+				margin-right: 0;
+			}
 			&:last-child{margin-right: 0;}
+		}
+	}
+	&__name {
+		@media screen and (max-width: $phone-size) {
+			display: none;
 		}
 	}
 }
@@ -151,11 +232,20 @@
 		flex-direction: column;
 		align-items: flex-start;
 	}
+	@media screen and (max-width: $phone-size) {
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+	}
 	& > * {
 		margin-right: 2rem;
 		@media screen and (max-width: $tablet-size) {
 			margin-right: 0;
 			margin-bottom: 1rem;
+		}
+		@media screen and (max-width: $phone-size) {
+			margin-right: 2rem;
 		}
 		&:last-child{margin-right: 0;}
 	}

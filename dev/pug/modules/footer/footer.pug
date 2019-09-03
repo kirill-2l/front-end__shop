@@ -24,27 +24,27 @@ footer.footer
 						+footerNavLink('', 'Поставщикам')
 						+footerNavLink('', 'Новости')
 						+footerNavLink('', 'Отзывы')
-				.footer__item
+				.footer__item.footer__item--wide
 					ul.footer-nav
 						+footerNavLink('', 'Контакты')
 						+footerNavLink('', 'Вопрос-ответ')
 						+footerNavLink('', 'Карта сайта')
-					span.footer__address Москваб проспект Андронов, д. 11, к.2, павильон № 1/2
+					span.footer__address Москва, проспект Андронов, д. 11, к.2, павильон № 1/2
 			.footer__contacts
 				.footer__phones
 					a(href="tel:+78007077518").footer__phone 8 (800) 707-75-18
 					span.footer__text Звонок бесплатный
-					a(href="tel:+74951203034").footer__phone--small +7 (495) 120-30-34
+					span.footer__text +7 (495) 120-30-34
 				a(href="mailto:sale@baby-toys.ru").footer__mail sale@baby-toys.ru
 
 			.footer__contacts-mobile
 				.footer__item
 					a(href="tel:+78007077518").footer__phone 8 (800) 707-75-18
 					span.footer__text Звонок бесплатный
-				.footer__item
-					a(href="tel:+74951203034").footer__phone--small +7 (495) 120-30-34
+				.footer__item.footer__item--text-right
+					span.footer__text +7 (495) 120-30-34
 					a(href="mailto:sale@baby-toys.ru").footer__mail sale@baby-toys.ru
-				.footer__item
+				.footer__item.footer__item--full
 					.yandex-market
 						img(src="static/images/general/yandex.svg", alt="yandex-market")
 						a(href="").btn.btn--small.btn--transparent-gray.btn--inline Оставить отзыв
@@ -68,9 +68,9 @@ footer.footer
 					a(href="").socials__link
 						img(src="static/images/general/social/vk.svg", alt="vk").socials__icon
 						span.socials__name Вконтакте
-				.yandex-market
-					img(src="static/images/general/yandex.svg", alt="yandex-market")
-					a(href="").btn.btn--small.btn--transparent-gray.btn--inline Оставить отзыв
+			.yandex-market
+				img(src="static/images/general/yandex.svg", alt="yandex-market")
+				a(href="").btn.btn--small.btn--transparent-gray.btn--inline Оставить отзыв
 	.footer__bottom
 		.container
 			span.copyright © 2010-2019 «Baby-Toys». Все права защищены. Информация сайта защищена законом об авторских правах.

@@ -1,6 +1,5 @@
 
-.header {
-	&__mobile {
+.header__mobile {
 		display: none;
 		position: relative;
 		@media screen and (max-width: $tablet-size) {
@@ -9,11 +8,24 @@
 		.container {
 			display: flex;
 			justify-content: space-between;
+			align-items: center;
+			@media screen and (max-width: $phone-size) {
+				justify-content: flex-start;
+				align-items: center;
+				padding: 0;
+			}
 			& > * {
 				flex: 0 0 48%;
 				width: 48%;
+				@media screen and (max-width: $phone-size) {
+					flex: 0 0 auto;
+					width: auto;
+				}
 			}
 		}
+		.search {
+			@media screen and (max-width: $phone-size) {
+				display: none;
+		}
 	}
-
 }

@@ -12,6 +12,14 @@
 		}
 	}
 	&.brands__list--small {
+		flex-wrap: wrap;
+		padding: 0 1.5rem;
+		@media screen and (max-width: $phone-size) {
+			flex-wrap: nowrap;
+			overflow: auto;
+			margin-right: -1.5rem;
+			padding-right: 1.5rem;
+		}
 		& > * {
 			margin-right: 1rem;
 			margin-bottom: 1rem;
@@ -21,6 +29,10 @@
 					margin-right: 1rem;
 					&:last-child{margin-right: 0;}
 				}
+				@media screen and (max-width: $phone-size) {
+				height: auto;
+				margin-bottom: 2rem;
+			}
 			}
 		}
 	}
@@ -32,8 +44,8 @@
 	color: $main-shaft;
 	&__img {
 		margin-bottom: 0.5rem;
-		height: 8rem;
-		width: 11rem;
+		max-height: 8rem;
+		max-width: 11rem;
 		&:hover {
 			box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1), 0 2px 5px 0 rgba(0, 0, 0, 0.05);
 			transition: all linear .3s;

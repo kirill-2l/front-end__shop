@@ -7,6 +7,9 @@
 	@media screen and (max-width: $tablet-size) {
 		flex-wrap: wrap;
 	}
+	@media screen and (max-width: $phone-size) {
+		flex-direction: column;
+	}
 	& > * {
 		flex: 1;
 		padding-right: 3rem;
@@ -14,14 +17,31 @@
 			flex: 0 0 50%;
 			width: 50%;
 		}
+		@media screen and (max-width: $phone-size) {
+			flex: 1;
+			width: 100%;
+		}
 		&:last-child {
 			padding-right: 0;
 		}
 	}
 
 	&-item {
+		@media screen and (max-width: $phone-size) {
+			margin-top: 4rem;
+		}
+		&:first-child {
+			@media screen and (max-width: $phone-size) {
+				margin-top: 0;
+			}
+		}
+
 		&__body {
 			height: 25rem;
+			@media screen and (max-width: $phone-size) {
+				height: auto;
+				margin-bottom: 2rem;
+			}
 		}
 		&__footer {
 			display: flex;
@@ -47,6 +67,10 @@
 			.information-item {
 				&__body {
 					height: 15rem;
+					@media screen and (max-width: $phone-size) {
+						height: auto;
+						margin-bottom: 2rem;
+					}
 				}
 			}
 		}

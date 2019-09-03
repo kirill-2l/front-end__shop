@@ -1,11 +1,14 @@
 .hits {
 	&-navigation {
-		display: flex;
+		display: inline-flex;
 		align-items: center;
+		width: 100%;
+		padding: 0 1.5rem;
 		&__item {
 			flex: 1;
 			margin-right: 3rem;
 			border-bottom: 2px solid $alto;
+			min-width: 15rem;
 			line-height: 4.8rem;
 			height: 5rem;
 			text-align: center;
