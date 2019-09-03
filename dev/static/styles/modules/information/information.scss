@@ -66,7 +66,9 @@
 			}
 			.information-item {
 				&__body {
-					height: 15rem;
+					@media screen and (max-width: $tablet-size) {
+						height: 15rem;
+						}
 					@media screen and (max-width: $phone-size) {
 						height: auto;
 						margin-bottom: 2rem;

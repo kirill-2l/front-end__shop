@@ -52,9 +52,15 @@ button { outline: none; }
 *, *:before, *:after { box-sizing: border-box; }
 
 .wrapper {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	left: 0;
+	position: relative;
+	transition: all linear .3s;
+	&.mobile-menu-open {
+		left: 100%;
+	}
 }
 
 .content { flex: 1 0 auto; }

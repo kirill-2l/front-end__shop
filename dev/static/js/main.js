@@ -147,7 +147,7 @@ $(document).ready(function () {
 				$(this).closest('.mobile-menu').removeClass('mobile-menu--open');
 				if($(window).width() < 768) {
 					$('html').removeClass('fixed');
-					$('.wrapper').removeClass('mobile-menu--open');
+					$('.wrapper').removeClass('mobile-menu-open');
 
 				}
 			});

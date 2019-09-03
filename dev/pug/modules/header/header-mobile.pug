@@ -36,8 +36,21 @@ mixin informNavLink(link, text)
 							+informNavLink('1', 'Новости')
 							+informNavLink('1', 'Гарантии')
 							+informNavLink('1', 'Контакты')
-		.mobile__logo.logo
-			img(src="static/images/general/logo.svg", alt="logo").logo__img
+				.mobile-menu__footer
+					.mobile-menu__phone
+						a(href="tel:84951203034").mobile-menu__phone-number +7 (495) 120-30-34
+						a(href="").mobile-menu__phone-link Заказать звонок
+					.mobile-menu__phone
+						a(href="tel:88007077518").mobile-menu__phone-number 8 (800) 707-75-18
+						span.mobile-menu__phone-text Звонок бесплатный
+		if(pageClass === "index-page")
+			.mobile__logo.logo
+				img(src="static/images/general/logo.svg", alt="logo").logo__img
+		else
+			a(href="index.html")
+				.mobile__logo.logo
+					img(src="static/images/general/logo.svg", alt="logo").logo__img
+
 		.search
 			form.search__form
 				.search__input-wrapper

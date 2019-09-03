@@ -8,6 +8,13 @@
 			display: flex;
 		}
 	}
+	.product-prev {
+		border-color: transparent;
+		@media screen and (max-width: 549px) {
+			border-color: $alto;
+			margin: 1rem 0 3rem;
+		}
+	}
 	&__btn {
 		display: flex;
 		align-items: center;

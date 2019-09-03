@@ -3,6 +3,9 @@
 		.mobile-menu {
 			&__content {
 				display: block;
+				@media screen and (max-width: $phone-size) {
+					left: 0;
+				}
 			}
 		}
 	}
@@ -50,8 +53,19 @@
 		left: 15px;
 		top: 0;
 		right: 15px;
-		z-index: 5;
+		transition: all linear .5s;
 		box-shadow: 0 5px 30px 0 rgba(75, 75, 75, 0.5);
+		z-index: 5;
+		@media screen and (max-width: $phone-size) {
+			display: block;
+			position: fixed;
+			left: -100%;
+			right: auto;
+			bottom: 0;
+			width: 100%;
+			overflow: auto;
+			box-shadow: none;
+		}
 	}
 	&__header {
 		display: flex;
@@ -78,9 +92,28 @@
 		display: flex;
 		align-items: center;
 		background-color: $alto;
+		padding: 1rem 1.5rem;
 		& > * {
 			margin-right: 2rem;
 			&:last-child{margin-right: 0;}
+		}
+	}
+	&__phone {
+		display: flex;
+		flex-direction: column;
+
+		&-number {
+			color: $main-shaft;
+			margin-bottom: 5px;
+		}
+		&-link {
+			color: $dusty-gray;
+			font-size: 1.2rem;
+			text-decoration: underline;
+		}
+		&-text {
+			font-size: 1rem;
+			color: $dusty-gray;
 		}
 	}
 }

@@ -1,0 +1,31 @@
+extends template/main
+
+block variables
+	- var title = 'Все бренды'
+	- var pageClass = 'brands-page'
+
+block content
+	.breadcrumbs
+		.container
+			ul.breadcrumbs__list
+				li.breadcrumbs__item
+					a(href="index.html").breadcrumbs__link Главная
+				li.breadcrumbs__item
+					span.breadcrumbs__current Бренды
+	section.s-brands
+		.container
+			.brands
+				h1.title-page Бренды
+				ul.brands__list
+
+					each brand in [{img: 'puky', name: 'PUKY'},{img: 'globber', name: 'Globber'},{img: 'hudora', name: 'Hudora'},{img: 'kokua', name: 'Kokua'},{img: 'micro', name: 'Micro'},{img: 'Stiga', name: 'Stiga'},{img: 'puky', name: 'PUKY'},{img: 'globber', name: 'Globber'},{img: 'hudora', name: 'Hudora'},{img: 'kokua', name: 'Kokua'},{img: 'micro', name: 'Micro'},{img: 'Stiga', name: 'Stiga'},{img: 'puky', name: 'PUKY'},{img: 'globber', name: 'Globber'},{img: 'hudora', name: 'Hudora'},{img: 'kokua', name: 'Kokua'},{img: 'micro', name: 'Micro'},{img: 'Stiga', name: 'Stiga'},{img: 'puky', name: 'PUKY'},{img: 'globber', name: 'Globber'},{img: 'hudora', name: 'Hudora'},{img: 'kokua', name: 'Kokua'},{img: 'micro', name: 'Micro'},{img: 'Stiga', name: 'Stiga'}]
+
+						li.brands__item
+							a(href="").brand
+								img(src=`static/images/content/brands/${brand.img}.jpg`).brand__img
+								span.brand__name= brand.name
+
+				.content-block
+					h3.title-block Сео текст по брендам
+					p.text Далеко-далеко за словесными горами в стране гласных, и согласных живут рыбные тексты. Напоивший грустный собрал свой взгляд использовало маленький своего, алфавит подпоясал?
+					p.text Далеко-далеко за словесными горами в стране гласных, и согласных живут рыбные тексты. Напоивший грустный собрал свой взгляд использовало маленький своего, алфавит подпоясал?

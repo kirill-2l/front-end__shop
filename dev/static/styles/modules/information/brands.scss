@@ -1,38 +1,38 @@
-
-.brands__list {
-	display: flex;
-	@media screen and (max-width: $tablet-size) {
+.brands {
+	border-top: 1px solid $alto;
+	padding-top: 3rem;
+	&__list {
+		display: flex;
 		flex-wrap: wrap;
-	}
-	& > * {
-		margin-right: 1rem;
-		margin-bottom: 1rem;
-		&:nth-child(6n+6) {
-			margin-right: 0;
-		}
-	}
-	&.brands__list--small {
-		flex-wrap: wrap;
-		padding: 0 1.5rem;
-		@media screen and (max-width: $phone-size) {
-			flex-wrap: nowrap;
-			overflow: auto;
-			margin-right: -1.5rem;
-			padding-right: 1.5rem;
-		}
+		justify-content: space-between;
 		& > * {
-			margin-right: 1rem;
-			margin-bottom: 1rem;
-			&:nth-child(3n + 3) {
-				margin-right: 0;
-				@media screen and (max-width: $tablet-size) {
-					margin-right: 1rem;
-					&:last-child{margin-right: 0;}
-				}
-				@media screen and (max-width: $phone-size) {
-				height: auto;
-				margin-bottom: 2rem;
+			flex: 0 0 16%;
+			width: 16%;
+			margin-bottom: 4.5rem;
+			@media screen and (max-width: $tablet-size) {
+				flex: 0 0 25%;
+				width: 25%;
 			}
+			@media screen and (max-width: $tablet-size) {
+				flex: 0 0 50%;
+				width: 50%;
+			}
+		}
+		&-small {
+			display: flex;
+			flex-wrap: wrap;
+			@media screen and (max-width: $tablet-size) {
+				flex-wrap: nowrap;
+			}
+			& > * {
+				margin-right: 1rem;
+				margin-bottom: 1rem;
+				&:nth-child(3n + 3) {
+					margin-right: 0;
+					@media screen and (max-width: $tablet-size) {
+						margin-right: 1rem;
+					}
+				}
 			}
 		}
 	}
