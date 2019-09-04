@@ -90,8 +90,10 @@
 				text-align: center;
 			}
 			& > * {
-				flex: 0 0 45%;
-				width: 45%;
+				@media screen and (max-width: $tablet-size) {
+					flex: 0 0 45%;
+					width: 45%;
+				}
 				@media screen and (max-width: $phone-size) {
 					flex: 1;
 					width: 100%;
@@ -101,6 +103,7 @@
 	}
 	&__personal-data {
 		color: $oslo-gray;
+		text-align: right;
 		@media screen and (max-width: $phone-size) {
 			margin-top: 1px;
 		}

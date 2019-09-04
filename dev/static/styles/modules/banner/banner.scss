@@ -3,8 +3,10 @@
 	@media screen and (max-width: $phone-size) {
 		padding-top: 0;
 	}
-	.container {
-		padding: 0;
+	@media screen and (max-width: $phone-size) {
+		.container {
+			padding: 0;
+		}
 	}
 
 }

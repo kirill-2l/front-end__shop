@@ -1,6 +1,7 @@
 .brands {
 	border-top: 1px solid $alto;
 	padding-top: 3rem;
+	margin-bottom: -4.5rem;
 	&__list {
 		display: flex;
 		flex-wrap: wrap;
@@ -37,6 +38,7 @@
 		}
 	}
 }
+
 .brand {
 	display: flex;
 	flex-direction: column;
@@ -51,4 +53,81 @@
 			transition: all linear .3s;
 		}
 	}
+	&-info {
+		display: flex;
+		align-items: flex-start;
+		@media screen and (max-width: $phone-size) {
+			flex-direction: column;
+		}
+		& > * {
+			margin-right: 3rem;
+			@media screen and (max-width: $phone-size) {
+				margin-bottom: 3rem;
+				margin-right: 0;
+			}
+			&:last-child{
+				margin-right: 0;
+				@media screen and (max-width: $phone-size) {
+					margin-bottom: 0;
+				}
+			}
+		}
+		&__tablet {
+			flex: 0 0 25.5rem;
+			width: 25.5rem;
+			@media screen and (max-width: $phone-size) {
+				flex: 1;
+				width: 100%;
+			}
+			& > * {
+				margin: 2rem 0;
+				&:last-child {margin-top: 0;}
+				&:first-child {margin-bottom: 0;}
+			}
+		}
+	}
+	&__logo {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 4rem;
+		border: 1px solid $alto;
+		border-radius: 2px;
+		.brand__img {
+			&:hover {
+				box-shadow: none;
+			}
+		}
+	}
+	&__description {
+		flex: 1;
+		& > * {
+			margin: 2rem 0;
+			&:first-child{margin-top: 0;}
+			&:last-child{margin-bottom: 0;}
+		}
+	}
+	&__sertificates {
+		flex: 0 0 25.5rem;
+		width: 25.5rem;
+		@media screen and (max-width: $phone-size) {
+			flex: 1;
+			width: 100%;
+		}
+		&-label {
+			display: block;
+			font-weight: 700;
+			line-height: 1.79;
+			margin-bottom: 1.5rem;
+		}
+	}
+	&__sertificate {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: 1px solid $alto;
+		border-radius: 2px;
+		padding: 2rem;
+	}
+
 }
