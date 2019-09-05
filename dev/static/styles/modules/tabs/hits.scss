@@ -14,7 +14,7 @@
 			text-align: center;
 			&:last-child {margin-right: 0;}
 			&:hover {
-				border-bottom: $blaze-orange;
+				border-bottom-color: $blaze-orange;
 			}
 			&.tabs-navigation__item--active {
 				border-bottom-color: $blaze-orange;

@@ -1,5 +1,7 @@
 @import "content-block";
 @import "about";
+@import 'pagination';
+@import 'select';
 
 .logo {
 	&__img {
@@ -98,10 +100,20 @@
 			height: 1px;
 		}
 	}
+	&-advantages {
+		padding: 0;
+	}
 }
 .text {
 	line-height: 1.79;
 	margin-bottom: 1rem;
+
+	&-attention {
+		padding-left: 2rem;
+		border-left: 3px solid $blaze-orange;
+		line-height: 1.79;
+		margin-bottom: 4.5rem;
+	}
 }
 
 .sandwich {

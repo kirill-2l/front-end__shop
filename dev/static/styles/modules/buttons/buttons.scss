@@ -37,6 +37,24 @@
 				}
 			}
 		}
+		&--contour {
+			&-gray {
+				border: 2px solid $alto;
+				color: $tundora;
+				line-height: 3.6rem;
+				&:hover {
+					background-color: $alto;
+					color: $white;
+				}
+
+			}
+		}
+		&--bg {
+			&-orange {
+				background-color: $blaze-orange;
+				color: $white;
+			}
+		}
 		&--round {
 			border-radius: 2rem;
 		}

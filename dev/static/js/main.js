@@ -188,6 +188,74 @@ $(document).ready(function () {
 		});
 	};
 
+		let categorySlider = function () {
+			$('.js-category-slider').slick({
+				slidesToShow: 6,
+				dots: true,
+				arrows: false,
+				infinite: false,
+				appendDots:'.category-slider__dots',
+				customPaging: function(slider, i) {
+					return '<div class="category-slider__dot"></div';
+				},
+				responsive: [
+				{
+					breakpoint: 1140,
+					settings: {
+						slidesToShow: 4,
+						},
+					},
+				{
+					breakpoint: 768,
+					settings: {
+						slidesToShow: 2,
+						},
+					},
+				]
+			});
+		};
+
+		let tabletSubnavMenu = function () {
+			$(document).on('click', '.inform-nav__tablet-toggle', function () {
+			$(this).toggleClass('inform-subnav--open');
+			})
+		};
+
+		let select = function () {
+			$(document).on('click', '.select__header', function() {
+				$(this).parent().toggleClass('select--open')
+			});
+			$(document).on('click', '.select-list__item', function() {
+				let current = $(this).closest('.select').find('.select__current')[0];
+				$(this).closest('.select').removeClass('select--open');
+				$(current).text($(this).text());
+			});
+		};
+
+		let filterToggle = function () {
+			$(document).on('click', '.filter-mobile__toggle', function () {
+				$('.filter').addClass('filter--open');
+			});
+			$(document).on('click', '.filter-mobile__close', function () {
+			$('.filter').removeClass('filter--open')
+			});
+		};
+
+
+
+		catalogNavHover();
+		openSearchForm();
+		clearSearchForm();
+		bannerSlider();
+		tabs();
+		productPrevSlider();
+		productLineSlider();
+		productBorderLineSlider();
+		mobileMenu();
+		categorySlider();
+		tabletSubnavMenu();
+		select();
+		filterToggle();
 
 $(window).on('resize', function() {
 	let brandInfo = function () {
@@ -200,13 +268,4 @@ $(window).on('resize', function() {
 	brandInfo();
 });
 
-		catalogNavHover();
-		openSearchForm();
-		clearSearchForm();
-		bannerSlider();
-		tabs();
-		productPrevSlider();
-		productLineSlider();
-		productBorderLineSlider();
-		mobileMenu();
 });

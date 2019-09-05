@@ -1,0 +1,131 @@
+.filter {
+	background-color: $white;
+	position: relative;
+	&.filter--open {
+		@media screen and (max-width: $tablet-size) {
+			display: block;
+		}
+	}
+	@media screen and (max-width: $tablet-size) {
+		display: none;
+		position: absolute;
+		top: 0;
+		left: -1px;
+		box-shadow: 0 5px 30px 0 rgba(75,75,75, 0.5);
+		z-index: 5;
+	}
+	@media screen and (max-width: $phone-size) {
+		top: 55px;
+	}
+	&__body {
+		& > * {
+			margin: 2rem 0;
+			&:first-child{margin-top: 0;}
+			&:last-child{margin-bottom: 0;}
+		}
+	}
+	&__block {
+		padding: 2rem;
+		border: 1px solid $alto;
+		border-radius: 2px;
+		& > * {
+			margin: 1rem 0;
+			&:first-child{margin-top: 0;}
+			&:last-child{margin-bottom: 0;}
+		}
+	}
+	&__title {
+		display: block;
+		margin-bottom: 1rem;
+		font-weight: 700;
+		line-height: 2.14;
+		color: $blaze-orange;
+	}
+	&__buttons {
+		display: flex;
+		& > * {
+			margin-right: 1.5rem;
+			flex:1;
+			&:last-child{margin-right: 0;}
+		}
+	}
+	&__label {
+		display: block;
+		color: $tundora;
+		margin-bottom: 1rem;
+		font-weight: 700;
+	}
+	&-list {
+		&__item {
+			margin-bottom: 1rem;
+			&:last-child{margin-bottom: 0;}
+		}
+		&__link {
+			color: $tundora;
+			font-weight: 600;
+		}
+	}
+	&-color {
+		&__list {
+			display: flex;
+			flex-wrap: wrap;
+			& > * {
+				margin-right: 1rem;
+				margin-bottom: 1rem;
+			}
+		}
+		&__item {
+			display: block;
+			@include size(2rem);
+			border-radius: 0.2rem;
+			outline: none;
+			cursor: pointer;
+			&.filter-color__item--white {
+				border: 1px solid $alto;
+			}
+		}
+	}
+	&-mobile {
+		&__toggle {
+			display: none;
+			align-items: center;
+			height: 4rem;
+			padding: 0 1.5rem;
+			line-height: 38px;
+			border: 1px solid $alto;
+			border-radius: 3px;
+			cursor: pointer;
+			@media screen and (max-width: $tablet-size) {
+				display: flex;
+				font-size: 1.2rem;
+			}
+			& > * {
+				margin-right: 1rem;
+				&:last-child{margin-right: 0;}
+			}
+			&-icon {
+				@include size (1.2rem);
+				fill: $blaze-orange;
+			}
+		}
+		&__close {
+			position: absolute;
+			left: 100%;
+			top: 0;
+			display: none;
+			align-items: center;
+			justify-content: center;
+			background-color: $blaze-orange;
+			@include size (4rem);
+			cursor: pointer;
+			z-index: 1;
+			@media screen and (max-width: $tablet-size) {
+				display: flex;
+			}
+			&-icon {
+				@include size (1.8rem);
+				fill: $white;
+			}
+		}
+	}
+}

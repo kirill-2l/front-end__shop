@@ -94,6 +94,9 @@
 		border: 1px solid $alto;
 		border-radius: 2px;
 		.brand__img {
+			height: auto;
+			width: auto;
+			max-width: 100%;
 			&:hover {
 				box-shadow: none;
 			}

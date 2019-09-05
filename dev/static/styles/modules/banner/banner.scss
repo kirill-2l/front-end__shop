@@ -1,10 +1,9 @@
 .s-banner {
-	padding-bottom: 0;
 	@media screen and (max-width: $phone-size) {
 		padding-top: 0;
 	}
-	@media screen and (max-width: $phone-size) {
-		.container {
+	.container {
+		@media screen and (max-width: $phone-size) {
 			padding: 0;
 		}
 	}

@@ -1,0 +1,61 @@
+.pagination {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&__wrapper {
+		position: relative;
+	}
+	&__btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		@include size(4rem);
+	}
+	&__icon {
+		@include size (1.8rem);
+		fill: $blaze-orange;
+	}
+	&__list {
+		display: flex;
+		align-items: center;
+	}
+	&__item {
+		border: 1px solid $alto;
+		border-right: 0;
+		&:last-child{
+			border-right: 1px solid $alto;
+		}
+		&.pagination__item--active {
+			.pagination__link {
+				background-color: $alto;
+			}
+		}
+	}
+	&__link {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		@include size(4rem);
+		font-size: 1.2rem;
+		color: $tundora;
+	}
+	&__count {
+		position: absolute;
+		right: 0;
+		top: 0;
+		display: flex;
+		align-items: center;
+		font-size: 1.2rem;
+		margin-left: auto;
+		@media screen and (max-width: $phone-size) {
+			position: static;
+			justify-content: center;
+			margin-top: 2rem;
+		}
+		& > * {
+			margin-right: 1rem;
+			&:last-child{margin-right: 0;}
+		}
+	}
+}

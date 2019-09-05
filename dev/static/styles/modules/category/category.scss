@@ -1,0 +1,47 @@
+@import "slider";
+@import "filter";
+
+.s-category-main {
+	padding-top: 0;
+}
+.category {
+	&__header {
+		display: flex;
+		align-items: center;
+		margin-bottom: 2rem;
+		@media screen and (max-width: $phone-size) {
+			flex-wrap: wrap;
+		}
+		.title-page {
+			margin-bottom: 0;
+			@media screen and (max-width: $phone-size) {
+				flex: 0 0 100%;
+				width: 100%;
+				margin-bottom: 2.5rem;
+				}
+			}
+		& > * {
+			margin-right: 1rem;
+			&:last-child{margin-right: 0;}
+		}
+	}
+	&__sort {
+		margin-left: auto;
+		min-width: 25rem;
+		@media screen and (max-width: $phone-size) {
+			min-width: 17rem;
+		}
+	}
+	&__body {
+		display: flex;
+		align-items: flex-start;
+	}
+	&__filter {
+		flex: 0 0 25.5rem;
+		width: 25.5rem;
+		margin-right: 3rem;
+	}
+	&-main {
+		flex: 1;
+	}
+}

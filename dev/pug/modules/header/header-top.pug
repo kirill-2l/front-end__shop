@@ -1,5 +1,5 @@
-mixin informNavLink(link, text)
-	li.inform-nav__item
+mixin informNavLink(link, text, mod)
+	li(class=mod).inform-nav__item
 		a(href=link).inform-nav__link=text
 
 .header__top
@@ -9,11 +9,19 @@ mixin informNavLink(link, text)
 					ul.inform-nav__list
 						+informNavLink('1', 'О компании')
 						+informNavLink('1', 'Доставка и оплата')
-						+informNavLink('1', 'Акции')
-						+informNavLink('1', 'Оптовикам')
-						+informNavLink('1', 'Новости')
-						+informNavLink('1', 'Гарантии')
+						+informNavLink('1', 'Акции', 'inform-nav__tablet-hide')
+						+informNavLink('1', 'Оптовикам', 'inform-nav__tablet-hide')
+						+informNavLink('1', 'Новости', 'inform-nav__tablet-hide')
+						+informNavLink('1', 'Гарантии', 'inform-nav__tablet-hide')
 						+informNavLink('1', 'Контакты')
+						li.inform-nav__tablet-toggle
+							+icon('dots','inform-nav__tablet-icon')
+							.inform-subnav
+								.inform-subnav__arrow
+								ul.inform-subnav__list
+									each item in ['Акции','Оптовикам','Новости','Гарантии']
+										li.inform-subnav__item
+											a(href="").inform-subnav__link=item
 				nav.header__nav.header__nav--right.inform-nav
 					ul.inform-nav__list
 						+informNavLink('1', 'Регистрация')
