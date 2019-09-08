@@ -65,26 +65,6 @@
 			font-weight: 600;
 		}
 	}
-	&-color {
-		&__list {
-			display: flex;
-			flex-wrap: wrap;
-			& > * {
-				margin-right: 1rem;
-				margin-bottom: 1rem;
-			}
-		}
-		&__item {
-			display: block;
-			@include size(2rem);
-			border-radius: 0.2rem;
-			outline: none;
-			cursor: pointer;
-			&.filter-color__item--white {
-				border: 1px solid $alto;
-			}
-		}
-	}
 	&-mobile {
 		&__toggle {
 			display: none;

@@ -38,6 +38,7 @@
 			line-height: 4.8rem;
 			height: 5rem;
 			padding-left: 1rem;
+			min-width: 15rem;
 			@media screen and (max-width: $tablet-size) {
 				flex: 1;
 				width: 100%;

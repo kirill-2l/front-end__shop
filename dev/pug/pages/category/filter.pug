@@ -21,12 +21,12 @@
 		.filter__row
 			.filter-color
 				span.filter__label Цвет
-				ul.filter-color__list
+				ul.color-list
 					each color in ['247BA0', '70C1B3', 'B2DBBF', 'F3FFBD', 'FF1654', '011627', 'ffffff', '2EC4B6', 'E71D36', 'FF9F1C', 'E63946', 'F1FAEE', 'A8DADC', '457B9D']
 						if(color === "ffffff")
-							li.filter-color__item.filter-color__item--white(style=`background-color:#${color}`)
+							li.color-list__item.color-list__item--white(style=`background-color:#${color}`)
 						else
-							li.filter-color__item(style=`background-color:#${color}`)
+							li.color-list__item(style=`background-color:#${color}`)
 
 		.filter__buttons
 			button.btn.btn--contour-gray Сброс

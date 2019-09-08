@@ -7,13 +7,13 @@ mixin informNavLink(link, text, mod)
 			.header__content
 				nav.header__nav.inform-nav
 					ul.inform-nav__list
-						+informNavLink('1', 'О компании')
-						+informNavLink('1', 'Доставка и оплата')
-						+informNavLink('1', 'Акции', 'inform-nav__tablet-hide')
-						+informNavLink('1', 'Оптовикам', 'inform-nav__tablet-hide')
-						+informNavLink('1', 'Новости', 'inform-nav__tablet-hide')
-						+informNavLink('1', 'Гарантии', 'inform-nav__tablet-hide')
-						+informNavLink('1', 'Контакты')
+						+informNavLink('static-page.html', 'О компании')
+						+informNavLink('static-page.html', 'Доставка и оплата')
+						+informNavLink('static-page.html', 'Акции', 'inform-nav__tablet-hide')
+						+informNavLink('static-page.html', 'Оптовикам', 'inform-nav__tablet-hide')
+						+informNavLink('static-page.html', 'Новости', 'inform-nav__tablet-hide')
+						+informNavLink('static-page.html', 'Гарантии', 'inform-nav__tablet-hide')
+						+informNavLink('static-page.html', 'Контакты')
 						li.inform-nav__tablet-toggle
 							+icon('dots','inform-nav__tablet-icon')
 							.inform-subnav
@@ -24,5 +24,5 @@ mixin informNavLink(link, text, mod)
 											a(href="").inform-subnav__link=item
 				nav.header__nav.header__nav--right.inform-nav
 					ul.inform-nav__list
-						+informNavLink('1', 'Регистрация')
-						+informNavLink('1', 'Вход')
+						+informNavLink('static-page.html', 'Регистрация')
+						+informNavLink('static-page.html', 'Вход')
