@@ -19,11 +19,19 @@ html(lang="ru-RU")
 	body(class=pageClass)
 
 		.wrapper
+			ul.pages-list
+				+list('pages-list__item','Главная', './index.html')
+				+list('pages-list__item','Все бренды', './brands.html')
+				+list('pages-list__item','Результаты поиска', './search.html')
+				+list('pages-list__item','Бренд', './brand.html')
+				+list('pages-list__item','Статическая страница', './static-page.html')
+				+list('pages-list__item','Товар', './product.html')
+				+list('pages-list__item','Каталог', './category.html')
+
 			include ../modules/header/header
 			.content
 				block content
 			include ../modules/footer/footer
-		script(src="static/js/jquery-3.3.1.min.js")
 		script(src="static/js/libs.min.js")
-		script(src="static/js/main.js")
+		script(src="static/js/main.min.js")
 		block script
