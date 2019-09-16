@@ -1,5 +1,6 @@
 let uglify = require('gulp-uglify'),
-    concat = require('gulp-concat'),
+		concat = require('gulp-concat'),
+		babel = require('gulp-babel'),
     scriptsPATH = {
         "input": "./dev/static/js/",
         "ouput": "./build/static/js/"
@@ -8,6 +9,7 @@ let uglify = require('gulp-uglify'),
 module.exports = function () {
     $.gulp.task('libsJS:dev', () => {
 				return $.gulp.src([
+					'node_modules/jquery/dist/jquery.min.js',
 					'node_modules/svg4everybody/dist/svg4everybody.min.js',
 					'node_modules/slick-carousel/slick/slick.min.js'
 
@@ -18,6 +20,7 @@ module.exports = function () {
 
     $.gulp.task('libsJS:build', () => {
         return $.gulp.src([
+					'node_modules/jquery/dist/jquery.min.js',
 					'node_modules/svg4everybody/dist/svg4everybody.min.js',
 					'node_modules/slick-carousel/slick/slick.min.js'
 				])
@@ -44,7 +47,10 @@ module.exports = function () {
     $.gulp.task('js:build-min', () => {
         return $.gulp.src([scriptsPATH.input + '*.js',
             '!' + scriptsPATH.input + 'libs.min.js'])
-            .pipe(concat('main.min.js'))
+						.pipe(concat('main.min.js'))
+						.pipe(babel({
+							presets: ['@babel/env']
+							}))
             .pipe(uglify())
             .pipe($.gulp.dest(scriptsPATH.ouput))
     });
